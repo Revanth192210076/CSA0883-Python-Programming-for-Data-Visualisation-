@@ -1,0 +1,12 @@
+def remove_duplicates(arr):
+    n = len(arr)
+    if n <= 1:
+        return n
+    unique_elements = set(arr)
+    arr[:n] = unique_elements
+    return len(unique_elements)
+if __name__ == "__main__":
+    arr = [1, 2, 2, 3, 4, 4, 4, 5, 5]
+    n = remove_duplicates(arr)
+    for i in range(n):
+        print(arr[i], end=" ")
